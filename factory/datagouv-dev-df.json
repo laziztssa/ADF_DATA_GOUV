@@ -1,0 +1,9 @@
+{
+	"name": "datagouv-dev-df",
+	"location": "francecentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8f8a305b-4b60-43fc-b96e-58a490a5daf8",
+		"tenantId": "8abfe3af-fdf3-42a6-8cdd-1b6670cb04f1"
+	}
+}
