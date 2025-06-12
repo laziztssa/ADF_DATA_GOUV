@@ -1,0 +1,6 @@
+{
+	"name": "Ingestion_To_Parquet",
+	"properties": {
+		"annotations": []
+	}
+}
