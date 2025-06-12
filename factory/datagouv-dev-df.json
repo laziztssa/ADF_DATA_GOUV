@@ -1,5 +1,13 @@
 {
 	"name": "datagouv-dev-df",
+	"properties": {
+		"globalParameters": {
+			"Environnement": {
+				"type": "string",
+				"value": "dev"
+			}
+		}
+	},
 	"location": "francecentral",
 	"identity": {
 		"type": "SystemAssigned",
