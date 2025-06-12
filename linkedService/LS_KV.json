@@ -1,0 +1,11 @@
+{
+	"name": "LS_KV",
+	"properties": {
+		"description": "Création de Link service qui se base sur des Keyvauld",
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://keyValuds-datagouv-dev.vault.azure.net/"
+		}
+	}
+}
