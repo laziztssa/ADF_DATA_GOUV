@@ -9,7 +9,7 @@
 		"annotations": [],
 		"type": "AzureBlobFS",
 		"typeProperties": {
-			"url": "https://stgdatagouvdev.dfs.core.windows.net",
+			"url": "@{concat('https://stgdatagouv', parameters('env'), '.dfs.core.windows.net')}",
 			"accountKey": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
