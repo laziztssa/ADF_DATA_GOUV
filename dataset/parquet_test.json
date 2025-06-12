@@ -1,0 +1,21 @@
+{
+	"name": "parquet_test",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "test_parquet",
+				"folderPath": "parquet",
+				"fileSystem": "processd"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
