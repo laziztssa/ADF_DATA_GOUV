@@ -13,8 +13,7 @@
 		},
 		"parameters": {
 			"env": {
-				"type": "string",
-				"defaultValue": "dev"
+				"type": "string"
 			}
 		},
 		"annotations": [],
