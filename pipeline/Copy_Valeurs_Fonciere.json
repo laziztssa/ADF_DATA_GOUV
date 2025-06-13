@@ -43,6 +43,18 @@
 							}
 						}
 					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "LS_ADLStorage",
+							"type": "LinkedServiceReference",
+							"parameters": {
+								"env": {
+									"value": "@pipeline().globalParameters.Environnement",
+									"type": "Expression"
+								}
+							}
+						}
+					},
 					"compute": {
 						"coreCount": 8,
 						"computeType": "General"
