@@ -1,1 +1,6 @@
-{}
+{
+	"Environnement": {
+		"type": "string",
+		"value": "dev"
+	}
+}

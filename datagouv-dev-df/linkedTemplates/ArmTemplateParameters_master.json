@@ -6,7 +6,7 @@
 			"value": "datagouv-dev-df"
 		},
 		"LS_ADLStorage_properties_typeProperties_url": {
-			"value": "https://stgdatagouvdev.dfs.core.windows.net"
+			"value": "@{concat('https://stgdatagouv', parameters('env'), '.dfs.core.windows.net')}"
 		},
 		"LS_KV_properties_typeProperties_baseUrl": {
 			"value": "https://keyValuds-datagouv-dev.vault.azure.net/"

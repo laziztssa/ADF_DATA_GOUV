@@ -9,7 +9,7 @@
 		},
 		"LS_ADLStorage_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "https://stgdatagouvdev.dfs.core.windows.net"
+			"defaultValue": "@{concat('https://stgdatagouv', parameters('env'), '.dfs.core.windows.net')}"
 		},
 		"LS_KV_properties_typeProperties_baseUrl": {
 			"type": "string",
@@ -189,6 +189,11 @@
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
+				"parameters": {
+					"env": {
+						"type": "string"
+					}
+				},
 				"annotations": [],
 				"type": "AzureBlobFS",
 				"typeProperties": {
