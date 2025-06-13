@@ -31,10 +31,6 @@
 				}
 			],
 			"scriptLines": [
-				"parameters{",
-				"     env as string,",
-				"     FileName as string",
-				"}",
 				"source(output(",
 				"          {Identifiant de document} as string,",
 				"          {Reference document} as string,",
