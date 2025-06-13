@@ -1,9 +1,9 @@
 {
-	"name": "Copy_Valeurs_Fonciere",
+	"name": "Execute_DF_Valeurs_Fonciere",
 	"properties": {
 		"activities": [
 			{
-				"name": "Data flow1",
+				"name": "Valeurs_Foncieres",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -21,17 +21,14 @@
 						"datasetParameters": {
 							"ValeursFonciereyyyy": {
 								"env": {
-									"value": "@pipeline().parameters.env",
+									"value": "@pipeline().globalParameters.Environnement",
 									"type": "Expression"
 								},
-								"FileName": {
-									"value": "@pipeline().parameters.SourceFileName",
-									"type": "Expression"
-								}
+								"FileName": "2024"
 							},
 							"Generationdefichiercsv": {
 								"env": {
-									"value": "@pipeline().parameters.env",
+									"value": "@pipeline().globalParameters.Environnement",
 									"type": "Expression"
 								}
 							}
@@ -45,15 +42,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"env": {
-				"type": "string",
-				"defaultValue": "dev"
-			},
-			"SourceFileName": {
-				"type": "string"
-			}
-		},
 		"folder": {
 			"name": "Ingestion_Valeurs_Fonciere"
 		},
