@@ -42,16 +42,7 @@
 							"dataflow": {
 								"referenceName": "Valeurs_Fonciere",
 								"type": "DataFlowReference",
-								"parameters": {
-									"env": {
-										"value": "@pipeline().parameters.env",
-										"type": "Expression"
-									},
-									"FileName": {
-										"value": "@pipeline().parameters.SourceFileName",
-										"type": "Expression"
-									}
-								},
+								"parameters": {},
 								"datasetParameters": {
 									"ValeursFonciereyyyy": {
 										"env": {
@@ -69,7 +60,8 @@
 											"type": "Expression"
 										}
 									}
-								}
+								},
+								"linkedServiceParameters": {}
 							},
 							"staging": {},
 							"compute": {
@@ -86,7 +78,7 @@
 				"parameters": {
 					"env": {
 						"type": "string",
-						"defaultValue": "@pipeline().globalParameters.Environnement"
+						"defaultValue": "dev"
 					},
 					"SourceFileName": {
 						"type": "string"
@@ -639,10 +631,6 @@
 						}
 					],
 					"scriptLines": [
-						"parameters{",
-						"     env as string,",
-						"     FileName as string",
-						"}",
 						"source(output(",
 						"          {Identifiant de document} as string,",
 						"          {Reference document} as string,",
