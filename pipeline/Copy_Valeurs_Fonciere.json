@@ -19,10 +19,6 @@
 						"referenceName": "Valeurs_Fonciere",
 						"type": "DataFlowReference",
 						"parameters": {
-							"FileName": {
-								"value": "'@{pipeline().parameters.SourceFileName}'",
-								"type": "Expression"
-							},
 							"env": {
 								"value": "'@{pipeline().globalParameters.Environnement}'",
 								"type": "Expression"

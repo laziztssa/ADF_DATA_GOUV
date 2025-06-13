@@ -32,8 +32,8 @@
 			],
 			"scriptLines": [
 				"parameters{",
-				"     FileName as string ($FileName),",
-				"     env as string ($env)",
+				"     env as string,",
+				"     FileName as string",
 				"}",
 				"source(output(",
 				"          {Identifiant de document} as string,",
@@ -98,7 +98,6 @@
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     saveOrder: 1,",
 				"     mapColumn(",
 				"          {Identifiant de document},",
 				"          {Reference document},",
