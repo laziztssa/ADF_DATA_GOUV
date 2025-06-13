@@ -705,28 +705,28 @@
 								"type": "DataFlowReference",
 								"parameters": {
 									"env": {
-										"value": "@{pipeline().globalParameters.Environnement}",
+										"value": "@pipeline().parameters.env",
 										"type": "Expression"
 									},
 									"FileName": {
-										"value": "@{pipeline().parameters.SourceFileName}",
+										"value": "@pipeline().parameters.SourceFileName",
 										"type": "Expression"
 									}
 								},
 								"datasetParameters": {
 									"ValeursFonciereyyyy": {
 										"env": {
-											"value": "@pipeline().globalParameters.Environnement",
+											"value": "@pipeline().parameters.env",
 											"type": "Expression"
 										},
 										"FileName": {
-											"value": "@pipeline().parameters.sourceFileName",
+											"value": "@pipeline().parameters.SourceFileName",
 											"type": "Expression"
 										}
 									},
 									"Generationdefichiercsv": {
 										"env": {
-											"value": "@pipeline().globalParameters.Environnement",
+											"value": "@pipeline().parameters.env",
 											"type": "Expression"
 										}
 									}
@@ -745,6 +745,10 @@
 					"elapsedTimeMetric": {}
 				},
 				"parameters": {
+					"env": {
+						"type": "string",
+						"defaultValue": "@pipeline().globalParameters.Environnement"
+					},
 					"SourceFileName": {
 						"type": "string"
 					}
