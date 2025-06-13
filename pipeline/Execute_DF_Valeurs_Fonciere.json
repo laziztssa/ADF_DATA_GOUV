@@ -22,7 +22,7 @@
 							"ValeursFonciereyyyy": {
 								"env": "dev"
 							},
-							"Generationdefichiercsv": {
+							"sink1": {
 								"env": "dev"
 							}
 						}
