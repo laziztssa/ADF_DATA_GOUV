@@ -1,11 +1,18 @@
 {
-	"name": "Copy_Valeurs_Fonciere_Parquet",
+	"name": "Copy_Valeurs_Fonciere",
 	"properties": {
 		"activities": [
 			{
 				"name": "Copy_To_Csv",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Reccueration de nom fichier",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -34,7 +41,7 @@
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
 							"quoteAllText": true,
-							"fileExtension": ".csv"
+							"fileExtension": "ValeurFonciere.csv"
 						}
 					},
 					"enableStaging": false,
@@ -71,6 +78,41 @@
 						}
 					}
 				]
+			},
+			{
+				"name": "Reccueration de nom fichier",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ValeursFoncieres",
+						"type": "DatasetReference",
+						"parameters": {
+							"env": {
+								"value": "@pipeline().globalParameters.Environnement",
+								"type": "Expression"
+							}
+						}
+					},
+					"fieldList": [
+						"itemName"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
 			}
 		],
 		"folder": {
