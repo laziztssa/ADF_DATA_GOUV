@@ -22,6 +22,10 @@
 							"env": {
 								"value": "'@{pipeline().globalParameters.Environnement}'",
 								"type": "Expression"
+							},
+							"FileName": {
+								"value": "'@{pipeline().parameters.SourceFileName}'",
+								"type": "Expression"
 							}
 						},
 						"datasetParameters": {
