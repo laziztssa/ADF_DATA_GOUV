@@ -18,16 +18,6 @@
 					"dataflow": {
 						"referenceName": "Valeurs_Fonciere",
 						"type": "DataFlowReference",
-						"parameters": {
-							"env": {
-								"value": "@pipeline().parameters.env",
-								"type": "Expression"
-							},
-							"FileName": {
-								"value": "@pipeline().parameters.SourceFileName",
-								"type": "Expression"
-							}
-						},
 						"datasetParameters": {
 							"ValeursFonciereyyyy": {
 								"env": {
@@ -58,7 +48,7 @@
 		"parameters": {
 			"env": {
 				"type": "string",
-				"defaultValue": "@pipeline().globalParameters.Environnement"
+				"defaultValue": "dev"
 			},
 			"SourceFileName": {
 				"type": "string"
