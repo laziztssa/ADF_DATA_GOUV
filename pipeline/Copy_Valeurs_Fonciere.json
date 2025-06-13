@@ -557,8 +557,7 @@
 									"type": "String",
 									"physicalType": "String"
 								}
-							},
-							null
+							}
 						],
 						"typeConversion": true,
 						"typeConversionSettings": {
