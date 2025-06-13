@@ -24,10 +24,10 @@
 				"folderPath": "ValeursFoncieres",
 				"fileSystem": "processd"
 			},
-			"columnDelimiter": ",",
+			"columnDelimiter": ";",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
-			"quoteChar": "\""
+			"quoteChar": ""
 		},
 		"schema": []
 	}

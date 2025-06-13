@@ -34,7 +34,7 @@
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
 							"quoteAllText": true,
-							"fileExtension": ".txt"
+							"fileExtension": ".csv"
 						}
 					},
 					"enableStaging": false,
@@ -62,7 +62,13 @@
 				"outputs": [
 					{
 						"referenceName": "ProcessedValeurFoncieres",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"env": {
+								"value": "@pipeline().globalParameters.Environnement",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
