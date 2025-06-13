@@ -9,7 +9,7 @@
 						"referenceName": "ValeursFoncieres",
 						"type": "DatasetReference"
 					},
-					"name": "source1"
+					"name": "ValeursFonciereyyyy"
 				}
 			],
 			"sinks": [
@@ -27,12 +27,12 @@
 			],
 			"transformations": [
 				{
-					"name": "derivedColumn1"
+					"name": "RajoutDeChamps"
 				}
 			],
 			"scriptLines": [
 				"parameters{",
-				"     FileName as string ($FileName)",
+				"     FileName as string",
 				"}",
 				"source(output(",
 				"          {Identifiant de document} as string,",
@@ -85,9 +85,9 @@
 				"     moveFiles: ['','Archive'],",
 				"     dateFormats: ['MM-dd-yyyy'],",
 				"     timestampFormats: ['MM-dd-yyyy HH:mm:ss'],",
-				"     preferredFractionalType: 'float') ~> source1",
-				"source1 derive(Fichier_Source = $FileName) ~> derivedColumn1",
-				"derivedColumn1 sink(allowSchemaDrift: false,",
+				"     preferredFractionalType: 'float') ~> ValeursFonciereyyyy",
+				"ValeursFonciereyyyy derive(Fichier_Source = $FileName) ~> RajoutDeChamps",
+				"RajoutDeChamps sink(allowSchemaDrift: true,",
 				"     validateSchema: true,",
 				"     partitionFileNames:['Valeur_Fonciere.csv'],",
 				"     umask: 0775,",
@@ -95,6 +95,7 @@
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
+				"     saveOrder: 1,",
 				"     mapColumn(",
 				"          {Identifiant de document},",
 				"          {Reference document},",
