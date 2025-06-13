@@ -14,6 +14,9 @@
 		"parameters": {
 			"env": {
 				"type": "string"
+			},
+			"SourceFileName": {
+				"type": "string"
 			}
 		},
 		"annotations": [],
