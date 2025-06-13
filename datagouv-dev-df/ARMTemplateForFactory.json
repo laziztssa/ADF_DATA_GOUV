@@ -84,13 +84,8 @@
 					"elapsedTimeMetric": {}
 				},
 				"parameters": {
-					"sourceFileName": {
-						"type": "string",
-						"defaultValue": "ValeursFoncieres-2024"
-					},
-					"env": {
-						"type": "string",
-						"defaultValue": "dev"
+					"SourceFileName": {
+						"type": "string"
 					}
 				},
 				"folder": {
