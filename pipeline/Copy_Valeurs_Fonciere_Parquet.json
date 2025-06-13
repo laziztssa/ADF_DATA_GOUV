@@ -1,0 +1,9 @@
+{
+	"name": "Copy_Valeurs_Fonciere_Parquet",
+	"properties": {
+		"folder": {
+			"name": "Ingestion_Valeurs_Fonciere"
+		},
+		"annotations": []
+	}
+}
