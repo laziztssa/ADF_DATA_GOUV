@@ -20,11 +20,7 @@
 						"type": "DataFlowReference",
 						"datasetParameters": {
 							"ValeursFonciereyyyy": {
-								"env": {
-									"value": "@pipeline().globalParameters.Environnement",
-									"type": "Expression"
-								},
-								"FileName": "2024"
+								"env": "dev"
 							},
 							"Generationdefichiercsv": {
 								"env": {
