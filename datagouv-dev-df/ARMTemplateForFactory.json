@@ -44,7 +44,7 @@
 								"type": "DataFlowReference",
 								"parameters": {
 									"FileName": {
-										"value": "'@{pipeline().parameters.sourceFileName}'",
+										"value": "@pipeline().parameters.sourceFileName",
 										"type": "Expression"
 									}
 								},
@@ -687,11 +687,13 @@
 						"     allowSchemaDrift: true,",
 						"     validateSchema: false,",
 						"     ignoreNoFilesFound: false,",
-						"     moveFiles: ['','Archive'],",
+						"     moveFiles: ['ValeursFoncieres-*.txt','Archive'],",
 						"     dateFormats: ['MM-dd-yyyy'],",
 						"     timestampFormats: ['MM-dd-yyyy HH:mm:ss'],",
-						"     preferredFractionalType: 'float') ~> ValeursFonciereyyyy",
-						"ValeursFonciereyyyy derive(Fichier_Source = $FileName) ~> RajoutDeChamps",
+						"     preferredFractionalType: 'float',",
+						"     partitionBy('hash', 1)) ~> ValeursFonciereyyyy",
+						"ValeursFonciereyyyy derive(Fichier_Source = $FileName,",
+						"     partitionBy('hash', 1)) ~> RajoutDeChamps",
 						"RajoutDeChamps sink(allowSchemaDrift: true,",
 						"     validateSchema: true,",
 						"     partitionFileNames:['Valeur_Fonciere.csv'],",
