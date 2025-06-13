@@ -9,11 +9,11 @@
 		},
 		"LS_ADLStorage_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "@{concat('https://stgdatagouv', parameters('env'), '.dfs.core.windows.net')}"
+			"defaultValue": "@{concat('https://stgdatagouv', linkedService().env, '.dfs.core.windows.net')}"
 		},
 		"LS_KV_properties_typeProperties_baseUrl": {
 			"type": "string",
-			"defaultValue": "https://keyValuds-datagouv-dev.vault.azure.net/"
+			"defaultValue": "@{concat('https://keyvaluds-datagouv-',linkedService().env,'.vault.azure.net/')}"
 		},
 		"containerUri": {
 			"type": "string",
