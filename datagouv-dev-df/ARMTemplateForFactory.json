@@ -44,11 +44,11 @@
 								"type": "DataFlowReference",
 								"parameters": {
 									"env": {
-										"value": "'@{pipeline().globalParameters.Environnement}'",
+										"value": "@{pipeline().globalParameters.Environnement}",
 										"type": "Expression"
 									},
 									"FileName": {
-										"value": "'@{pipeline().parameters.SourceFileName}'",
+										"value": "@{pipeline().parameters.SourceFileName}",
 										"type": "Expression"
 									}
 								},
