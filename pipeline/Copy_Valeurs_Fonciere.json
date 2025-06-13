@@ -53,7 +53,8 @@
 		],
 		"parameters": {
 			"sourceFileName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "ValeursFoncieres-2024"
 			}
 		},
 		"folder": {
