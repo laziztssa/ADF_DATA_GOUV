@@ -32,8 +32,8 @@
 			],
 			"scriptLines": [
 				"parameters{",
-				"     FileName as string,",
-				"     env as string",
+				"     FileName as string ($FileName),",
+				"     env as string ($env)",
 				"}",
 				"source(output(",
 				"          {Identifiant de document} as string,",
