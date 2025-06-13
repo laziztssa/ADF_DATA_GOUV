@@ -44,17 +44,7 @@
 						}
 					},
 					"staging": {
-						"linkedService": {
-							"referenceName": "LS_ADLStorage",
-							"type": "LinkedServiceReference",
-							"parameters": {
-								"env": {
-									"value": "@pipeline().globalParameters.Environnement",
-									"type": "Expression"
-								}
-							}
-						},
-						"folderPath": "processd"
+						"folderPath": ""
 					},
 					"compute": {
 						"coreCount": 8,
