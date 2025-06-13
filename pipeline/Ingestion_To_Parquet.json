@@ -74,7 +74,13 @@
 				"inputs": [
 					{
 						"referenceName": "test",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"env": {
+								"value": "@pipeline().globalParameters.Environnement",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
