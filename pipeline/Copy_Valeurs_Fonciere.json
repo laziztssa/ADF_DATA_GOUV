@@ -5,14 +5,7 @@
 			{
 				"name": "Copy_To_Csv",
 				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "Reccueration de nom fichier",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -47,6 +40,524 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Identifiant de document",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Identifiant de document",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Reference document",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Reference document",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "1 Articles CGI",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "1 Articles CGI",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "2 Articles CGI",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "2 Articles CGI",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "3 Articles CGI",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "3 Articles CGI",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "4 Articles CGI",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "4 Articles CGI",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "5 Articles CGI",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "5 Articles CGI",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "No disposition",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "No disposition",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Date mutation",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Date mutation",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Nature mutation",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Nature mutation",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Valeur fonciere",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Valeur fonciere",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "No voie",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "No voie",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "B/T/Q",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "B/T/Q",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Type de voie",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Type de voie",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Code voie",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Code voie",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Voie",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Voie",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Code postal",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Code postal",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Commune",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Commune",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Code departement",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Code departement",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Code commune",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Code commune",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Prefixe de section",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Prefixe de section",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Section",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Section",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "No plan",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "No plan",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "No Volume",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "No Volume",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "1er lot",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "1er lot",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Surface Carrez du 1er lot",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Surface Carrez du 1er lot",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "2eme lot",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "2eme lot",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Surface Carrez du 2eme lot",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Surface Carrez du 2eme lot",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "3eme lot",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "3eme lot",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Surface Carrez du 3eme lot",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Surface Carrez du 3eme lot",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "4eme lot",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "4eme lot",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Surface Carrez du 4eme lot",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Surface Carrez du 4eme lot",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "5eme lot",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "5eme lot",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Surface Carrez du 5eme lot",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Surface Carrez du 5eme lot",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Nombre de lots",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Nombre de lots",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Code type local",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Code type local",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Type local",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Type local",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Identifiant local",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Identifiant local",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Surface reelle bati",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Surface reelle bati",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Nombre pieces principales",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Nombre pieces principales",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Nature culture",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Nature culture",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Nature culture speciale",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Nature culture speciale",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Surface terrain",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Surface terrain",
+									"type": "String",
+									"physicalType": "String"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
@@ -78,41 +589,6 @@
 						}
 					}
 				]
-			},
-			{
-				"name": "Reccueration de nom fichier",
-				"type": "GetMetadata",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"dataset": {
-						"referenceName": "ValeursFoncieres",
-						"type": "DatasetReference",
-						"parameters": {
-							"env": {
-								"value": "@pipeline().globalParameters.Environnement",
-								"type": "Expression"
-							}
-						}
-					},
-					"fieldList": [
-						"itemName"
-					],
-					"storeSettings": {
-						"type": "AzureBlobFSReadSettings",
-						"enablePartitionDiscovery": false
-					},
-					"formatSettings": {
-						"type": "DelimitedTextReadSettings"
-					}
-				}
 			}
 		],
 		"folder": {
