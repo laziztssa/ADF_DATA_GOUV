@@ -1,0 +1,65 @@
+{
+	"name": "Copy_Valeurs_Fonciere",
+	"properties": {
+		"activities": [
+			{
+				"name": "Data flow1",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "Valeurs_Fonciere",
+						"type": "DataFlowReference",
+						"parameters": {
+							"FileName": {
+								"value": "'@{pipeline().parameters.sourceFileName}'",
+								"type": "Expression"
+							}
+						},
+						"datasetParameters": {
+							"ValeursFonciereyyyy": {
+								"env": {
+									"value": "@pipeline().globalParameters.Environnement",
+									"type": "Expression"
+								},
+								"FileName": {
+									"value": "@pipeline().parameters.sourceFileName",
+									"type": "Expression"
+								}
+							},
+							"Generationdefichiercsv": {
+								"env": {
+									"value": "@pipeline().globalParameters.Environnement",
+									"type": "Expression"
+								}
+							}
+						}
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"parameters": {
+			"sourceFileName": {
+				"type": "string",
+				"defaultValue": "ValeursFoncieres-2024"
+			}
+		},
+		"folder": {
+			"name": "Ingestion_Valeurs_Fonciere"
+		},
+		"annotations": []
+	}
+}
