@@ -1,5 +1,5 @@
 {
-	"name": "test",
+	"name": "ProcessedValeurFoncieres",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_ADLStorage",
@@ -21,23 +21,14 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "test.csv",
-				"fileSystem": "raw"
+				"folderPath": "ValeursFoncieres",
+				"fileSystem": "processd"
 			},
 			"columnDelimiter": ";",
-			"escapeChar": "",
+			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": ""
 		},
-		"schema": [
-			{
-				"name": "champs",
-				"type": "String"
-			},
-			{
-				"name": "nom",
-				"type": "String"
-			}
-		]
+		"schema": []
 	}
 }

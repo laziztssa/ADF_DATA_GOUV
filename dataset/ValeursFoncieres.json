@@ -1,0 +1,210 @@
+{
+	"name": "ValeursFoncieres",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLStorage",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"env": {
+					"value": "@dataset().env",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"env": {
+				"type": "string"
+			},
+			"FileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ValeursFoncieres-2024.txt",
+				"fileSystem": "raw"
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Identifiant de document",
+				"type": "String"
+			},
+			{
+				"name": "Reference document",
+				"type": "String"
+			},
+			{
+				"name": "1 Articles CGI",
+				"type": "String"
+			},
+			{
+				"name": "2 Articles CGI",
+				"type": "String"
+			},
+			{
+				"name": "3 Articles CGI",
+				"type": "String"
+			},
+			{
+				"name": "4 Articles CGI",
+				"type": "String"
+			},
+			{
+				"name": "5 Articles CGI",
+				"type": "String"
+			},
+			{
+				"name": "No disposition",
+				"type": "String"
+			},
+			{
+				"name": "Date mutation",
+				"type": "String"
+			},
+			{
+				"name": "Nature mutation",
+				"type": "String"
+			},
+			{
+				"name": "Valeur fonciere",
+				"type": "String"
+			},
+			{
+				"name": "No voie",
+				"type": "String"
+			},
+			{
+				"name": "B/T/Q",
+				"type": "String"
+			},
+			{
+				"name": "Type de voie",
+				"type": "String"
+			},
+			{
+				"name": "Code voie",
+				"type": "String"
+			},
+			{
+				"name": "Voie",
+				"type": "String"
+			},
+			{
+				"name": "Code postal",
+				"type": "String"
+			},
+			{
+				"name": "Commune",
+				"type": "String"
+			},
+			{
+				"name": "Code departement",
+				"type": "String"
+			},
+			{
+				"name": "Code commune",
+				"type": "String"
+			},
+			{
+				"name": "Prefixe de section",
+				"type": "String"
+			},
+			{
+				"name": "Section",
+				"type": "String"
+			},
+			{
+				"name": "No plan",
+				"type": "String"
+			},
+			{
+				"name": "No Volume",
+				"type": "String"
+			},
+			{
+				"name": "1er lot",
+				"type": "String"
+			},
+			{
+				"name": "Surface Carrez du 1er lot",
+				"type": "String"
+			},
+			{
+				"name": "2eme lot",
+				"type": "String"
+			},
+			{
+				"name": "Surface Carrez du 2eme lot",
+				"type": "String"
+			},
+			{
+				"name": "3eme lot",
+				"type": "String"
+			},
+			{
+				"name": "Surface Carrez du 3eme lot",
+				"type": "String"
+			},
+			{
+				"name": "4eme lot",
+				"type": "String"
+			},
+			{
+				"name": "Surface Carrez du 4eme lot",
+				"type": "String"
+			},
+			{
+				"name": "5eme lot",
+				"type": "String"
+			},
+			{
+				"name": "Surface Carrez du 5eme lot",
+				"type": "String"
+			},
+			{
+				"name": "Nombre de lots",
+				"type": "String"
+			},
+			{
+				"name": "Code type local",
+				"type": "String"
+			},
+			{
+				"name": "Type local",
+				"type": "String"
+			},
+			{
+				"name": "Identifiant local",
+				"type": "String"
+			},
+			{
+				"name": "Surface reelle bati",
+				"type": "String"
+			},
+			{
+				"name": "Nombre pieces principales",
+				"type": "String"
+			},
+			{
+				"name": "Nature culture",
+				"type": "String"
+			},
+			{
+				"name": "Nature culture speciale",
+				"type": "String"
+			},
+			{
+				"name": "Surface terrain",
+				"type": "String"
+			}
+		]
+	}
+}

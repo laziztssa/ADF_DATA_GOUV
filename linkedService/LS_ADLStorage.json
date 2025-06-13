@@ -9,12 +9,18 @@
 		"annotations": [],
 		"type": "AzureBlobFS",
 		"typeProperties": {
-			"url": "@{concat('https://stgdatagouv', parameters('env'), '.dfs.core.windows.net')}",
+			"url": "@{concat('https://stgdatagouv', linkedService().env, '.dfs.core.windows.net')}",
 			"accountKey": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
 					"referenceName": "LS_KV",
-					"type": "LinkedServiceReference"
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"env": {
+							"value": "@linkedService().env",
+							"type": "Expression"
+						}
+					}
 				},
 				"secretName": "blob-storage"
 			}
