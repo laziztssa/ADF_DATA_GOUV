@@ -5,10 +5,6 @@
 			"Environnement": {
 				"type": "string",
 				"value": "dev"
-			},
-			"KeyVaults_BaseUrl": {
-				"type": "string",
-				"value": "https://keyValuds-datagouv-dev.vault.azure.net/"
 			}
 		}
 	},
