@@ -742,6 +742,9 @@
 					"sourceFileName": {
 						"type": "string",
 						"defaultValue": "ValeursFoncieres-2024"
+					},
+					"env": {
+						"type": "string"
 					}
 				},
 				"folder": {
