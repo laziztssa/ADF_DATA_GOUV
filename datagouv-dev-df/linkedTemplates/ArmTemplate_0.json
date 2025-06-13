@@ -744,7 +744,8 @@
 						"defaultValue": "ValeursFoncieres-2024"
 					},
 					"env": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "dev"
 					}
 				},
 				"folder": {
