@@ -4,13 +4,14 @@
 		"description": "Création de Link service qui se base sur des Keyvauld",
 		"parameters": {
 			"env": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "dev"
 			}
 		},
 		"annotations": [],
 		"type": "AzureKeyVault",
 		"typeProperties": {
-			"baseUrl": "@{concat('https://kv-', parameters('env'), '.vault.azure.net/')}"
+			"baseUrl": "@{concat('https://keyValuds-datagouv-', parameters('env'), '.vault.azure.net/')}"
 		}
 	}
 }
