@@ -53,7 +53,8 @@
 									"type": "Expression"
 								}
 							}
-						}
+						},
+						"folderPath": "processd"
 					},
 					"compute": {
 						"coreCount": 8,
