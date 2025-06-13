@@ -20,19 +20,10 @@
 						"type": "DataFlowReference",
 						"datasetParameters": {
 							"ValeursFonciereyyyy": {
-								"env": "dev",
-								"FileName": "2024"
+								"env": "dev"
 							},
 							"Generationdefichiercsv": {
 								"env": "dev"
-							}
-						},
-						"linkedServiceParameters": {
-							"ValeursFonciereyyyy": {
-								"schemaLinkedService": {
-									"env": "dev",
-									"FileName": "2024"
-								}
 							}
 						}
 					},
