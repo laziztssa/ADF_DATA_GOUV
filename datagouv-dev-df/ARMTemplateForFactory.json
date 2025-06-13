@@ -45,20 +45,21 @@
 								"parameters": {},
 								"datasetParameters": {
 									"ValeursFonciereyyyy": {
-										"env": {
-											"value": "@pipeline().globalParameters.Environnement",
-											"type": "Expression"
-										},
+										"env": "dev",
 										"FileName": "2024"
 									},
 									"Generationdefichiercsv": {
-										"env": {
-											"value": "@pipeline().globalParameters.Environnement",
-											"type": "Expression"
-										}
+										"env": "dev"
 									}
 								},
-								"linkedServiceParameters": {}
+								"linkedServiceParameters": {
+									"ValeursFonciereyyyy": {
+										"schemaLinkedService": {
+											"env": "dev",
+											"FileName": "2024"
+										}
+									}
+								}
 							},
 							"staging": {},
 							"compute": {
@@ -666,13 +667,14 @@
 						"     ),",
 						"     allowSchemaDrift: true,",
 						"     validateSchema: false,",
+						"     limit: 100,",
 						"     ignoreNoFilesFound: false,",
 						"     moveFiles: ['ValeursFoncieres-*.txt','Archive'],",
 						"     dateFormats: ['MM-dd-yyyy'],",
 						"     timestampFormats: ['MM-dd-yyyy HH:mm:ss'],",
 						"     preferredFractionalType: 'float',",
 						"     partitionBy('hash', 1)) ~> ValeursFonciereyyyy",
-						"ValeursFonciereyyyy derive(Fichier_Source = $FileName,",
+						"ValeursFonciereyyyy derive(Fichier_Source = 2024,",
 						"     partitionBy('hash', 1)) ~> RajoutDeChamps",
 						"RajoutDeChamps sink(allowSchemaDrift: true,",
 						"     validateSchema: true,",
