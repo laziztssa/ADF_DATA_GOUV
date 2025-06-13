@@ -43,12 +43,12 @@
 								"referenceName": "Valeurs_Fonciere",
 								"type": "DataFlowReference",
 								"parameters": {
-									"FileName": {
-										"value": "@pipeline().parameters.sourceFileName",
-										"type": "Expression"
-									},
 									"env": {
 										"value": "'@{pipeline().globalParameters.Environnement}'",
+										"type": "Expression"
+									},
+									"FileName": {
+										"value": "'@{pipeline().parameters.SourceFileName}'",
 										"type": "Expression"
 									}
 								},
@@ -636,8 +636,8 @@
 					],
 					"scriptLines": [
 						"parameters{",
-						"     FileName as string,",
-						"     env as string",
+						"     env as string,",
+						"     FileName as string",
 						"}",
 						"source(output(",
 						"          {Identifiant de document} as string,",
@@ -702,7 +702,6 @@
 						"     postCommands: [],",
 						"     skipDuplicateMapInputs: true,",
 						"     skipDuplicateMapOutputs: true,",
-						"     saveOrder: 1,",
 						"     mapColumn(",
 						"          {Identifiant de document},",
 						"          {Reference document},",
