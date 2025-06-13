@@ -557,7 +557,8 @@
 									"type": "String",
 									"physicalType": "String"
 								}
-							}
+							},
+							null
 						],
 						"typeConversion": true,
 						"typeConversionSettings": {
@@ -573,6 +574,10 @@
 						"parameters": {
 							"env": {
 								"value": "@pipeline().globalParameters.Environnement",
+								"type": "Expression"
+							},
+							"FileName": {
+								"value": "@pipeline().parameters.sourceFileName",
 								"type": "Expression"
 							}
 						}
@@ -592,6 +597,11 @@
 				]
 			}
 		],
+		"parameters": {
+			"sourceFileName": {
+				"type": "string"
+			}
+		},
 		"folder": {
 			"name": "Ingestion_Valeurs_Fonciere"
 		},
