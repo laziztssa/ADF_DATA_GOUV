@@ -543,7 +543,7 @@
 								"referenceName": "ProcessedValeurFoncieres",
 								"type": "DatasetReference"
 							},
-							"name": "sink1"
+							"name": "Generationdefichierparquet"
 						}
 					],
 					"transformations": [
@@ -616,7 +616,7 @@
 						"     postCommands: [],",
 						"     skipDuplicateMapInputs: true,",
 						"     skipDuplicateMapOutputs: true,",
-						"     partitionBy('hash', 1)) ~> sink1"
+						"     partitionBy('hash', 1)) ~> Generationdefichierparquet"
 					]
 				}
 			},
@@ -650,12 +650,19 @@
 								"parameters": {},
 								"datasetParameters": {
 									"ValeursFonciereyyyy": {
-										"env": "dev"
+										"env": {
+											"value": "@pipeline().globalParameters.Environnement",
+											"type": "Expression"
+										}
 									},
-									"sink1": {
-										"env": "dev"
+									"Generationdefichierparquet": {
+										"env": {
+											"value": "@pipeline().globalParameters.Environnement",
+											"type": "Expression"
+										}
 									}
-								}
+								},
+								"linkedServiceParameters": {}
 							},
 							"staging": {},
 							"compute": {
