@@ -20,10 +20,16 @@
 						"type": "DataFlowReference",
 						"datasetParameters": {
 							"ValeursFonciereyyyy": {
-								"env": "dev"
+								"env": {
+									"value": "@pipeline().globalParameters.Environnement",
+									"type": "Expression"
+								}
 							},
 							"sink1": {
-								"env": "dev"
+								"env": {
+									"value": "@pipeline().globalParameters.Environnement",
+									"type": "Expression"
+								}
 							}
 						}
 					},
