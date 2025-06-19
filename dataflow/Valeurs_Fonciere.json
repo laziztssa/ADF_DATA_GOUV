@@ -18,7 +18,7 @@
 						"referenceName": "ProcessedValeurFoncieres",
 						"type": "DatasetReference"
 					},
-					"name": "sink1"
+					"name": "Generationdefichierparquet"
 				}
 			],
 			"transformations": [
@@ -91,7 +91,7 @@
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     partitionBy('hash', 1)) ~> sink1"
+				"     partitionBy('hash', 1)) ~> Generationdefichierparquet"
 			]
 		}
 	}
